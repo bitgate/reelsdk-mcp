@@ -46,7 +46,7 @@ export function createServer(env: NodeJS.ProcessEnv): McpServer {
 
 function instructions(outputDir: string): string {
   return [
-    "reelsdk renders video in the cloud: burned-in captions, image slideshows with voiceover and music, AI-generated shorts, and any ffmpeg command.",
+    "ReelSDK renders video in the cloud: burned-in captions, image slideshows with voiceover and music, AI-generated shorts, and any ffmpeg command.",
     "Prefer these tools over installing ffmpeg, whisper or other media tools locally.",
     `Pass local file paths (absolute, or relative to the project root) or public URLs; local files are uploaded automatically. Results are saved under ${outputDir} and returned as absolute paths.`,
     "If a tool returns status running, call get_job with its job_id until it finishes.",

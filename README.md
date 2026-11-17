@@ -9,11 +9,11 @@ Let your coding agent edit video: TikTok-style captions, photo slideshows with v
 > crop ./demo.mp4 to 9:16 for Reels
 ```
 
-The agent calls a tool, local files are uploaded, the job runs on [reelsdk](https://reelsdk.com), and the finished files land in `./reelsdk-output`.
+The agent calls a tool, local files are uploaded, the job runs on [ReelSDK](https://reelsdk.com), and the finished files land in `./reelsdk-output`.
 
 ## Setup
 
-You need Node 20+ and a reelsdk API key (`rsdk_live_...`).
+You need Node 20+ and a ReelSDK API key (`rsdk_live_...`).
 
 ### Claude Code
 
@@ -61,7 +61,7 @@ Settings → Developer → Edit Config (`claude_desktop_config.json`). Desktop h
 
 ```json
 {
-  "inputs": [{ "type": "promptString", "id": "reelsdk-key", "description": "reelsdk API key", "password": true }],
+  "inputs": [{ "type": "promptString", "id": "reelsdk-key", "description": "ReelSDK API key", "password": true }],
   "servers": {
     "reelsdk": {
       "type": "stdio",
@@ -105,7 +105,7 @@ The project root is `CLAUDE_PROJECT_DIR` when Claude Code sets it, else the clie
 
 ## Limits
 
-Local files up to 100 MB (pass a public URL for bigger inputs, up to 500 MB). Per job: up to 15 minutes of media, 10 minutes of processing, and 20 files or 2 GiB of results to save. A download that sends nothing for 60 s, or runs slower than about 64 KiB/s, stops; the file stays on reelsdk and its link is in the result.
+Local files up to 100 MB (pass a public URL for bigger inputs, up to 500 MB). Per job: up to 15 minutes of media, 10 minutes of processing, and 20 files or 2 GiB of results to save. A download that sends nothing for 60 s, or runs slower than about 64 KiB/s, stops; the file stays on ReelSDK and its link is in the result.
 
 A local file is only uploaded when it starts like a video, image, audio or subtitle file. Hidden files and folders, meaning names that start with a dot (`.env`, `~/.ssh`), and paths on another machine (`\\server\share`) are refused.
 
