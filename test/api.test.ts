@@ -225,7 +225,7 @@ describe("job answers", () => {
     expect(errorResult(error).content).toEqual([
       {
         type: "text",
-        text: "reelsdk-mcp refused reelsdk's answer (TOO_MANY_OUTPUTS): the job lists 21 files, and reelsdk-mcp saves at most 20\nGet this job from the reelsdk API directly for all of its links.",
+        text: "reelsdk-mcp refused ReelSDK's answer (TOO_MANY_OUTPUTS): the job lists 21 files, and reelsdk-mcp saves at most 20\nGet this job from the ReelSDK API directly for all of its links.",
       },
     ]);
   });

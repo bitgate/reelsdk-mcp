@@ -161,7 +161,7 @@ export class ReelSdk {
     const { idleMs, bytesPerSecond } = this.#limits;
 
     let requestId: string | undefined;
-    const tooLarge = () => new ApiError(413, "OUTPUT_TOO_LARGE", `the job's files are over ${sizeOf(this.#limits.outputBytes)}, more than reelsdk stores`, shown, { requestId });
+    const tooLarge = () => new ApiError(413, "OUTPUT_TOO_LARGE", `the job's files are over ${sizeOf(this.#limits.outputBytes)}, more than ReelSDK stores`, shown, { requestId });
     const timedOut = (reason: string) => new ApiError(504, "DOWNLOAD_TIMEOUT", reason, shown, { requestId, retryable: false });
 
     const started = Date.now();

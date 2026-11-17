@@ -1,6 +1,8 @@
 # AGENTS.md
 
-Local stdio MCP server that wraps the reelsdk video API. The API contract lives in the `bitgate/reelsdk` repo (`docs/CONTRACT.md`, `docs/SHORTS.md`) and at https://api.reelsdk.com/openapi.json.
+Local stdio MCP server that wraps the ReelSDK video API. The API contract lives in the `bitgate/reelsdk` repo (`docs/CONTRACT.md`, `docs/SHORTS.md`) and at https://api.reelsdk.com/openapi.json.
+
+Write the product as ReelSDK in anything a person or an agent reads: tool text, errors and the README. Lowercase `reelsdk` is only for identifiers: the server name, config keys, CLI args and the package name.
 
 ## Layout
 

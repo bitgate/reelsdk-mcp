@@ -659,7 +659,7 @@ describe("where files are saved", () => {
 
     expect(files.find((file) => file.name === "video")?.path).toBe(output("clip-captioned.mp4"));
     expect(files.find((file) => file.name === "srt")?.error).toBe(
-      "download failed: no data for 1 s\nThe connection stalled or was too slow. The file stays on reelsdk for now: download it from its url.\nRequest-Id: req_stalled_file",
+      "download failed: no data for 1 s\nThe connection stalled or was too slow. The file stays on ReelSDK for now: download it from its url.\nRequest-Id: req_stalled_file",
     );
   });
 
@@ -675,6 +675,6 @@ describe("where files are saved", () => {
     const { files = [] } = outcomeOf(await runner.start("captions", { video_url: "https://example.com/clip.mp4" }, "clip-captioned", context())).json;
 
     expect(files.filter((file) => file.path !== undefined)).toHaveLength(1);
-    expect(JSON.stringify(files)).toContain("more than reelsdk stores");
+    expect(JSON.stringify(files)).toContain("more than ReelSDK stores");
   });
 });
